@@ -1,0 +1,20 @@
+body {
+  height: 100vh;
+  background: rgb(255, 255, 255); /* For browsers that do not support gradients */
+  font-family: "Inter Medium", sans-serif;
+}
+
+.status {
+  text-align: left;
+  margin: 0px;
+  font-family: "Inter Medium", sans-serif;
+}
+
+.maincontainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 60%;
+}
