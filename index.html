@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockchain</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.0.1-alpha.5/web3.min.js"
+        integrity="sha512-NfffVWpEqu1nq+658gzlJQilRBOvjs+PhEKSjT9gkQXRy9OfxI2TOXr33zS7MgGyTpBa5qtC6mKJkQGd9dN/rw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
+</head>
+
+<body>
+    <main>
+        <h1>Blockchain</h1>
+        <p id="status1" class="status" style="color: red;">MetaMask Disconnected ...</p>
+
+        <div class="maincontainer">
+            <div class="section">
+                <button id="metamask">1. Connect MetaMask</button>
+            </div>
+            <div class="section">
+                <button id="accountbutton">2. Show Account Information</button>
+                <p id="status2"></p>
+            </div>
+            <div class="section">
+                <input id="showBalanceAddress" placeholder="Address 0x0 ..." pattern="^0x[a-fA-F0-9]{40}$" required />
+                <button id="showBalanceButton">3. Show Balance</button>
+                <p id="balanceDisplay"></p>
+            </div>
+            <div class="section">
+                <input id="fromAddress" placeholder="From: Address 0x0 ..." pattern="^0x[a-fA-F0-9]{40}$" required />
+                <input id="toAddress" placeholder="To: Address 0x0 ..." pattern="^0x[a-fA-F0-9]{40}$" required />
+                <input id="amountinput" type="number" placeholder="Amount Ether ..." step="0.0001" required />
+                <button id="sendButton">4. Send to Other Account</button>
+                <p id="sendStatus"></p>
+            </div>
+            <div class="section">
+                <input id="mintToAddress" placeholder="To: Contract Address 0x0 ..." pattern="^0x[a-fA-F0-9]{40}$" required />
+                <input id="mintAmount" type="number" placeholder="Mint Amount (Number of Tokens) ..." step="1" required />
+                <input id="mintValue" type="number" placeholder="Ether to Send ..." step="0.01" required />
+                <button id="mintbutton">5. Mint Token (Send Ether to CA)</button>
+                <p id="mintStatus"></p>
+            </div>
+            <div class="section">
+                <button id="getTokenAmountButton">6. Get Token Amount</button>
+                <p id="tokenAmountDisplay"></p>
+            </div>
+            <div class="section">
+                <input id="caBalanceAddress" placeholder="Address 0x0 ..." pattern="^0x[a-fA-F0-9]{40}$" required />
+                <button id="getCABalanceButton">7. Get CA User Balance</button>
+                <p id="caBalanceDisplay"></p>
+            </div>
+            <div class="section">
+                <button id="getContractBalanceButton">8. Get Contract Balance</button>
+                <p id="contractBalanceDisplay"></p>
+            </div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
